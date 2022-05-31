@@ -36,8 +36,8 @@ class Task_3_1(MetaIDS):
                 for process in cur_state["state"]:
                     assert process in window_buf[0]["state"]
                 # DEBUG: Assert: one line for every second:
-                if len(window_buf) > 0:
-                    assert window_buf[-1]["timestamp"] + 1 == cur_state["timestamp"]
+                if len(window_buf) > 1:
+                    assert window_buf[-2]["timestamp"] + 1 == cur_state["timestamp"], str(cur_state["timestamp"]) + ", " + str(window_buf[-2]["timestamp"])
 
                 for process in window_buf[0]["state"]:
                     diff = cur_state["state"][process] - window_buf[0]["state"][process]
@@ -77,7 +77,9 @@ class Task_3_1(MetaIDS):
             assert process in msg["state"]
 
             diff = msg["state"][process] - self.window_buf[0]["state"][process]
-            if diff < self.q_min_map[process] or diff > self.q_max_map[process]:
-                return True
+            if diff < self.q_min_map[process]:
+                return True, self.q_min_map[process]
+            elif diff > self.q_max_map[process]:
+                return True, self.q_max_map[process]
 
-        return False
+        return False, 0
