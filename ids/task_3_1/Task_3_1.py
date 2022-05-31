@@ -15,7 +15,7 @@ Q = 1
 class Task_3_1(MetaIDS):
     _name = "Task_3_1"
     _description = "Minumum and maximum change over a given window"
-    _requires = ["warmup-train.state", "warmup-live.state"]
+    _requires = ["train.state", "live.state"]
 
 
     def train(self, ipal=None, state=None):
