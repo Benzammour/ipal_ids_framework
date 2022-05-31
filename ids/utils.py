@@ -10,7 +10,7 @@ from .interarrivaltime.Mean import InterArrivalTimeMean
 from .interarrivaltime.Range import InterArrivalTimeRange
 from .oracles.OptimalIDS import OptimalIDS
 from .oracles.DummyIDS import DummyIDS
-from .task_3_1.task_3_1 import Task_3_1
+from .task_3_1.Task_3_1 import Task_3_1
 
 idss = [
     Autoregression,
