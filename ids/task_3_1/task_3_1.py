@@ -35,6 +35,9 @@ class Task_3_1(MetaIDS):
                 # DEBUG: Assert all process values are present in all states:
                 for process in cur_state["state"]:
                     assert process in window_buf[0]["state"]
+                # DEBUG: Assert: one line for every second:
+                if len(window_buf) > 0:
+                    assert window_buf[-1]["timestamp"] + 1 == cur_state["timestamp"]
 
                 for process in window_buf[0]["state"]:
                     diff = cur_state["state"][process] - window_buf[0]["state"][process]
@@ -58,3 +61,23 @@ class Task_3_1(MetaIDS):
             max_diff = max_change[process] - min_change[process]
             self.q_max_map[process] = max_change[process] + Q * max_diff
             self.q_min_map[process] = min_change[process] - Q * max_diff
+
+        self.window_buf = []
+
+
+    def new_state_msg(self, msg):
+        self.window_buf.append(msg)
+
+        # Remove old entries:
+        while len(self.window_buf) > 1 and self.window_buf[1]["timestamp"] + N <= msg["timestamp"]:
+            self.window_buf.pop(0)
+
+        for process in self.window_buf[0]["state"]:
+            # DEBUG
+            assert process in msg["state"]
+
+            diff = msg["state"][process] - self.window_buf[0]["state"][process]
+            if diff < self.q_min_map[process] or diff > self.q_max_map[process]:
+                return True
+
+        return False
