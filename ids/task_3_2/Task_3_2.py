@@ -17,6 +17,7 @@ class Task_3_2(MetaIDS):
     _requires = ["train.ipal", "live.ipal"]
     _conn_tree_map = {} # Maps each conn_id to a Tree
     _conn_window_map = {}
+    _last_n = []
 
 
     def train(self, ipal=None, state=None):
@@ -49,8 +50,43 @@ class Task_3_2(MetaIDS):
                     self._conn_window_map[conn_id].pop(0)
 
 
-    def new_state_msg(self, msg):
-        pass
+    def new_ipal_msg(self, msg):
+        #WIP
+        if len(self._last_n) <= N:
+            self._last_n.append(msg['type'])
+            return False, None
+        
+        
+        # Determine connection identifier:
+        src_addr = msg["src"].split(":")[0]
+        dest_addr = msg["dest"].split(":")[0]
+        if src_addr < dest_addr:
+            conn_id = (src_addr, dest_addr)
+        else:
+            conn_id = (dest_addr, src_addr)
+        
+        current_type = self._last_n[N]
+        
+        print(self._last_n)
+        
+        try:
+            c_1 = self._conn_tree_map[conn_id].visit_counter
+            c_2 = self._conn_tree_map[conn_id].type_child_map[self._last_n[0]].visit_counter
+            c_3 = self._conn_tree_map[conn_id].type_child_map[self._last_n[0]].type_child_map[self._last_n[1]].visit_counter
+            c_4 = self._conn_tree_map[conn_id].type_child_map[self._last_n[0]].type_child_map[self._last_n[1]].type_child_map[self._last_n[2]].visit_counter
+        except:
+            print("No")
+
+                
+                
+                
+         
+        self._last_n.pop(0)
+        self._last_n.append(msg['type'])
+            
+        if len(self._last_n) < N+1:
+            print(self._last_n)    
+        return False, msg
 
 
     def save_trained_model(self):
