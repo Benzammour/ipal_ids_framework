@@ -18,6 +18,7 @@ class Task_3_2(MetaIDS):
     _conn_tree_map = {} # Maps each conn_id to a Tree
     _conn_window_map = {}
     _last_n = []
+    
 
 
     def train(self, ipal=None, state=None):
@@ -55,7 +56,7 @@ class Task_3_2(MetaIDS):
         if len(self._last_n) <= N:
             self._last_n.append(msg['type'])
             return False, None
-        
+        percentage = []
         
         # Determine connection identifier:
         src_addr = msg["src"].split(":")[0]
@@ -74,18 +75,20 @@ class Task_3_2(MetaIDS):
             c_2 = self._conn_tree_map[conn_id].type_child_map[self._last_n[0]].visit_counter
             c_3 = self._conn_tree_map[conn_id].type_child_map[self._last_n[0]].type_child_map[self._last_n[1]].visit_counter
             c_4 = self._conn_tree_map[conn_id].type_child_map[self._last_n[0]].type_child_map[self._last_n[1]].type_child_map[self._last_n[2]].visit_counter
+            percentage.append(c_2/c_1)
+            percentage.append(c_3/c_2)
+            percentage.append(c_4/c_3)
         except:
             print("No")
-
-                
+        
+        
                 
                 
          
         self._last_n.pop(0)
         self._last_n.append(msg['type'])
             
-        if len(self._last_n) < N+1:
-            print(self._last_n)    
+        print(percentage)  
         return False, msg
 
 
