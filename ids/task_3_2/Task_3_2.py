@@ -7,7 +7,7 @@ import ipal_iids.settings as settings
 from ids.ids import MetaIDS
 
 
-N = 10
+N = 3
 
 
 #not finished but a start. Calculates q_min and q_max for one process value
@@ -35,7 +35,7 @@ class Task_3_2(MetaIDS):
                 # If the connection is new, initialize tree and window:
                 if not conn_id in self._conn_window_map:
                     self._conn_window_map[conn_id] = []
-                    self._conn_tree_map[conn_id] = Tree()
+                    self._conn_tree_map[conn_id] = Tree("")
 
                 # Append new message to window buffer:
                 self._conn_window_map[conn_id].append(msg)
@@ -102,26 +102,22 @@ class Task_3_2(MetaIDS):
         import matplotlib.pyplot as plt
 
         forest = nx.DiGraph()
-        next_node_id = 0
         for conn_id in self._conn_tree_map:
-            # Find highest node ID in graph:
-            for n in forest:
-                if n > next_node_id:
-                    next_node_id = n + 1
-            # Add edges for new Tree:
-            (edges, id) = self._conn_tree_map[conn_id].edges(next_node_id)
-            forest.add_edges_from(edges)
+            self._conn_tree_map[conn_id].add_edges(forest)
+
 
         fig, ax = plt.subplots(1)
 
-        nx.draw_networkx(forest, arrows=True, ax=ax)
+        #pos = graphviz_layout(forest, prog="twopi")
+        nx.draw_networkx(forest, arrows=True, ax=ax, with_labels=True)
 
         return plt, fig
 
 
 class Tree:
 
-    def __init__(self):
+    def __init__(self, prefix):
+        self.prefix = prefix
         self.visit_counter = 0
         self.type_child_map = {}
 
@@ -135,26 +131,23 @@ class Tree:
         next_msg_type = sequence[0]["type"]
 
         if not next_msg_type in self.type_child_map:
-            self.type_child_map[next_msg_type] = Tree()
+            self.type_child_map[next_msg_type] = Tree(self.prefix + "|" + next_msg_type)
         self.type_child_map[next_msg_type].count_sequence(sequence[1:])
 
-    def edges(self, next_id):
-        """Returns all edges of this subtree."""
-        own_id = next_id
-        next_id += 1
+    def add_edges(self, tree):
+        """Returns a list of all edges of this subtree together with the
+            corresponding message type as an attribute. and the next ID, that
+            does not correspond to a node in the graph induced by the edges."""
         res = []
         for key in self.type_child_map.keys():
-            res.append((own_id, next_id))
-            (sub_tree_edges, id) = self.type_child_map[key].edges(next_id)
-            res.extend(sub_tree_edges)
-            next_id = id
-
-        return (res, next_id)
+            tree.add_edge(self.prefix, self.type_child_map[key].prefix, msg_type=key)
+            self.type_child_map[key].add_edges(tree)
 
 
     def to_dict(self):
         res = {}
         res["counter"] = self.visit_counter
+        res["prefix"] = self.prefix
         res["childs"] = {}
         for key in self.type_child_map:
             res["childs"][key] = self.type_child_map[key].to_dict()
@@ -163,7 +156,7 @@ class Tree:
 
     @staticmethod
     def from_dict(src):
-        res = Tree()
+        res = Tree(src["prefix"])
         res.visit_counter = src["counter"]
         for msg_type in src["childs"]:
             res.type_child_map[msg_type] = Tree.from_dict(src["childs"][msg_type])
