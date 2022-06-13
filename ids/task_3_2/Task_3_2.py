@@ -100,6 +100,7 @@ class Task_3_2(MetaIDS):
     def visualize_model(self):
         import networkx as nx
         import matplotlib.pyplot as plt
+        from networkx.drawing.nx_pydot import graphviz_layout
 
         forest = nx.DiGraph()
         for conn_id in self._conn_tree_map:
@@ -108,12 +109,17 @@ class Task_3_2(MetaIDS):
 
         fig, ax = plt.subplots(1)
 
-        #pos = graphviz_layout(forest, prog="twopi")
-        # This prints the visit_counter as node labels:
+
+        int_forest = nx.convert_node_labels_to_integers(forest, label_attribute="node_label")
+        int_pos = graphviz_layout(int_forest, prog="twopi", root="")
+        str_pos = {int_forest.nodes[n]["node_label"]: p for n, p in int_pos.items()}
+        nx.draw(forest, pos=str_pos, ax=ax)
+        # Draw edge labels:
+        edge_labels = nx.get_edge_attributes(forest, "msg_type")
+        nx.draw_networkx_edge_labels(forest, pos=str_pos, edge_labels=edge_labels)
+        # Draw node labels:
         node_labels = nx.get_node_attributes(forest, "counter")
-        nx.draw_networkx(forest, arrows=True, ax=ax, labels=node_labels)
-        # And this prints the prefix as node labels:
-        #nx.draw_networkx(forest, arrows=True, ax=ax, with_labels=True)
+        nx.draw_networkx_labels(forest, labels=node_labels, pos=str_pos)
 
         return plt, fig
 
