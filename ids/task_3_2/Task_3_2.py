@@ -25,10 +25,12 @@ class Task_3_2(MetaIDS):
                 msg = json.loads(line)
 
                 # Determine connection identifier:
-                if msg["src"] < msg["dest"]:
-                    conn_id = (msg["src"], msg["dest"])
+                src_addr = msg["src"].split(":")[0]
+                dest_addr = msg["dest"].split(":")[0]
+                if src_addr < dest_addr:
+                    conn_id = (src_addr, dest_addr)
                 else:
-                    conn_id = (msg["dest"], msg["src"])
+                    conn_id = (dest_addr, src_addr)
 
                 # If the connection is new, initialize tree and window:
                 if not conn_id in self._conn_window_map:
