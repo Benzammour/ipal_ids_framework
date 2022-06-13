@@ -15,7 +15,7 @@ class Task_3_2(MetaIDS):
     _name = "Task_3_2"
     _description = "Probabilistic Suffix Trees"
     _requires = ["train.ipal", "live.ipal"]
-    _conn_tree_map = {}
+    _conn_tree_map = {} # Maps each conn_id to a Tree
     _conn_window_map = {}
 
 
@@ -97,6 +97,28 @@ class Task_3_2(MetaIDS):
         return True
 
 
+    def visualize_model(self):
+        import networkx as nx
+        import matplotlib.pyplot as plt
+
+        forest = nx.DiGraph()
+        next_node_id = 0
+        for conn_id in self._conn_tree_map:
+            # Find highest node ID in graph:
+            for n in forest:
+                if n > next_node_id:
+                    next_node_id = n + 1
+            # Add edges for new Tree:
+            (edges, id) = self._conn_tree_map[conn_id].edges(next_node_id)
+            forest.add_edges_from(edges)
+
+        fig, ax = plt.subplots(1)
+
+        nx.draw_networkx(forest, arrows=True, ax=ax)
+
+        return plt, fig
+
+
 class Tree:
 
     def __init__(self):
@@ -115,6 +137,19 @@ class Tree:
         if not next_msg_type in self.type_child_map:
             self.type_child_map[next_msg_type] = Tree()
         self.type_child_map[next_msg_type].count_sequence(sequence[1:])
+
+    def edges(self, next_id):
+        """Returns all edges of this subtree."""
+        own_id = next_id
+        next_id += 1
+        res = []
+        for key in self.type_child_map.keys():
+            res.append((own_id, next_id))
+            (sub_tree_edges, id) = self.type_child_map[key].edges(next_id)
+            res.extend(sub_tree_edges)
+            next_id = id
+
+        return (res, next_id)
 
 
     def to_dict(self):
