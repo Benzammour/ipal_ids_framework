@@ -109,7 +109,11 @@ class Task_3_2(MetaIDS):
         fig, ax = plt.subplots(1)
 
         #pos = graphviz_layout(forest, prog="twopi")
-        nx.draw_networkx(forest, arrows=True, ax=ax, with_labels=True)
+        # This prints the visit_counter as node labels:
+        node_labels = nx.get_node_attributes(forest, "counter")
+        nx.draw_networkx(forest, arrows=True, ax=ax, labels=node_labels)
+        # And this prints the prefix as node labels:
+        #nx.draw_networkx(forest, arrows=True, ax=ax, with_labels=True)
 
         return plt, fig
 
@@ -135,13 +139,15 @@ class Tree:
         self.type_child_map[next_msg_type].count_sequence(sequence[1:])
 
     def add_edges(self, tree):
-        """Returns a list of all edges of this subtree together with the
-            corresponding message type as an attribute. and the next ID, that
-            does not correspond to a node in the graph induced by the edges."""
+        """Adds all edges of this subtree to the given Graph."""
+        import networkx as nx
+
         res = []
         for key in self.type_child_map.keys():
             tree.add_edge(self.prefix, self.type_child_map[key].prefix, msg_type=key)
             self.type_child_map[key].add_edges(tree)
+
+        nx.set_node_attributes(tree, values={self.prefix: self.visit_counter}, name="counter")
 
 
     def to_dict(self):
