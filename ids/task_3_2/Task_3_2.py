@@ -10,17 +10,19 @@ import ipal_iids.settings as settings
 from ids.ids import MetaIDS
 
 
-N = 3
-
-
 # not finished but a start. Calculates q_min and q_max for one process value
 class Task_3_2(MetaIDS):
     _name = "Task_3_2"
     _description = "Probabilistic Suffix Trees"
     _requires = ["train.ipal", "live.ipal"]
+    _pst_default_settings = {"N": 3, "Threshold": 0.5, "alert_unknown": False}
     _conn_tree_map = {}  # Maps each conn_id to a Tree
     _conn_window_map = {}
     _last_n = []
+
+    def __init__(self, name=None):
+        super().__init__(name=name)
+        self._add_default_settings(self._pst_default_settings)
 
     def train(self, ipal=None, state=None):
         with self._open_file(ipal) as f:
@@ -44,7 +46,7 @@ class Task_3_2(MetaIDS):
                 self._conn_window_map[conn_id].append(msg)
 
                 # If the window is not full, we continue with next message:
-                if len(self._conn_window_map[conn_id]) < N:
+                if len(self._conn_window_map[conn_id]) < self.settings["N"]:
                     continue
                 else:
                     self._conn_tree_map[conn_id].count_sequence(
@@ -54,7 +56,7 @@ class Task_3_2(MetaIDS):
 
     def new_ipal_msg(self, msg):
         # WIP
-        if len(self._last_n) <= N:
+        if len(self._last_n) <= self.settings["N"]:
             self._last_n.append(msg["type"])
             return False, None
         percentage = []
@@ -67,7 +69,7 @@ class Task_3_2(MetaIDS):
         else:
             conn_id = (dest_addr, src_addr)
 
-        current_type = self._last_n[N]
+        current_type = self._last_n[self.settings["N"]]
 
         print(self._last_n)
 
