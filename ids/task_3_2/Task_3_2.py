@@ -55,11 +55,11 @@ class Task_3_2(MetaIDS):
                     self._conn_window_map[conn_id].pop(0)
 
     def new_ipal_msg(self, msg):
-        # WIP
-        if len(self._last_n) <= self.settings["N"]:
+        
+        if len(self._last_n) < self.settings["N"]:
             self._last_n.append(msg["type"])
             return False, None
-        percentage = []
+        
 
         # Determine connection identifier:
         src_addr = msg["src"].split(":")[0]
@@ -69,43 +69,25 @@ class Task_3_2(MetaIDS):
         else:
             conn_id = (dest_addr, src_addr)
 
-        current_type = self._last_n[self.settings["N"]]
-
-        print(self._last_n)
-
+        # Evaluate likelihood of sequence
+        temp = self._conn_tree_map[conn_id]
+        likelihood = 0
         try:
-            c_1 = self._conn_tree_map[conn_id].visit_counter
-            c_2 = (
-                self._conn_tree_map[conn_id]
-                .type_child_map[self._last_n[0]]
-                .visit_counter
-            )
-            c_3 = (
-                self._conn_tree_map[conn_id]
-                .type_child_map[self._last_n[0]]
-                .type_child_map[self._last_n[1]]
-                .visit_counter
-            )
-            c_4 = (
-                self._conn_tree_map[conn_id]
-                .type_child_map[self._last_n[0]]
-                .type_child_map[self._last_n[1]]
-                .type_child_map[self._last_n[2]]
-                .visit_counter
-            )
-            percentage.append(c_2 / c_1)
-            percentage.append(c_3 / c_2)
-            percentage.append(c_4 / c_3)
+            for i in range(len(self._last_n) -1):
+                temp = temp.type_child_map[self._last_n[i]]
+            likelihood = temp.visit_counter / self._conn_tree_map[conn_id].visit_counter
+            if likelihood < self.settings['Threshold']:
+                return True, likelihood
         except Exception as e:
-            print("No")
+            print("No sequence found")
             print("Exception:", e, file=sys.stderr)
+            return True, likelihood
 
         self._last_n.pop(0)
         self._last_n.append(msg["type"])
 
-        print(percentage)
-        print(current_type)
-        return False, msg
+        return False, likelihood
+
 
     def save_trained_model(self):
         if self.settings["model-file"] is None:
