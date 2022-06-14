@@ -29,13 +29,7 @@ class Task_3_2(MetaIDS):
             for line in f.readlines():
                 msg = json.loads(line)
 
-                # Determine connection identifier:
-                src_addr = msg["src"].split(":")[0]
-                dest_addr = msg["dest"].split(":")[0]
-                if src_addr < dest_addr:
-                    conn_id = (src_addr, dest_addr)
-                else:
-                    conn_id = (dest_addr, src_addr)
+                conn_id = self._parse_conn_id(msg)
 
                 # If the connection is new, initialize tree and window:
                 if conn_id not in self._conn_window_map:
@@ -55,39 +49,32 @@ class Task_3_2(MetaIDS):
                     self._conn_window_map[conn_id].pop(0)
 
     def new_ipal_msg(self, msg):
-        
-        if len(self._last_n) < self.settings["N"]:
-            self._last_n.append(msg["type"])
-            return False, None
-        
 
-        # Determine connection identifier:
-        src_addr = msg["src"].split(":")[0]
-        dest_addr = msg["dest"].split(":")[0]
-        if src_addr < dest_addr:
-            conn_id = (src_addr, dest_addr)
-        else:
-            conn_id = (dest_addr, src_addr)
+        # Populate initial window with N messages
+        self._last_n.append(msg["type"])
+        if len(self._last_n) > self.settings["N"]:
+            self._last_n.pop(0)
+        if len(self._last_n) < self.settings["N"]:
+            return False, None
+
+        # Determine connection identifier
+        conn_id = self._parse_conn_id(msg)
 
         # Evaluate likelihood of sequence
-        temp = self._conn_tree_map[conn_id]
+        iter_node = self._conn_tree_map[conn_id]
         likelihood = 0
-        try:
-            for i in range(len(self._last_n) -1):
-                temp = temp.type_child_map[self._last_n[i]]
-            likelihood = temp.visit_counter / self._conn_tree_map[conn_id].visit_counter
-            if likelihood < self.settings['Threshold']:
-                return True, likelihood
-        except Exception as e:
-            print("No sequence found")
-            print("Exception:", e, file=sys.stderr)
-            return True, likelihood
+        for i in range(len(self._last_n)):
+            if self._last_n[i] in iter_node.type_child_map:
+                iter_node = iter_node.type_child_map[self._last_n[i]]
+            else:
+                print("No sequence found")
+                return True, {"Likelihood": likelihood}
 
-        self._last_n.pop(0)
-        self._last_n.append(msg["type"])
+        likelihood = (
+            iter_node.visit_counter / self._conn_tree_map[conn_id].visit_counter
+        )
 
-        return False, likelihood
-
+        return likelihood < self.settings["Threshold"], {"Likelihood": likelihood}
 
     def save_trained_model(self):
         if self.settings["model-file"] is None:
@@ -159,3 +146,13 @@ class Task_3_2(MetaIDS):
         nx.draw_networkx_labels(forest, labels=node_labels, pos=str_pos)
 
         return plt, fig
+
+    def _parse_conn_id(self, msg):
+        src_addr = msg["src"].split(":")[0]
+        dest_addr = msg["dest"].split(":")[0]
+        if src_addr < dest_addr:
+            conn_id = (src_addr, dest_addr)
+        else:
+            conn_id = (dest_addr, src_addr)
+
+        return conn_id
