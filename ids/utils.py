@@ -11,7 +11,7 @@ from .interarrivaltime.Range import InterArrivalTimeRange
 from .oracles.OptimalIDS import OptimalIDS
 from .oracles.DummyIDS import DummyIDS
 from .minmaxchange.MinMaxChange import MinMaxChange
-from .task_3_2.Task_3_2 import Task_3_2
+from .pst.pst import PST
 
 idss = [
     Autoregression,
@@ -26,7 +26,7 @@ idss = [
     RandomForest,
     SVM,
     MinMaxChange,
-    Task_3_2,
+    PST,
 ]
 
 

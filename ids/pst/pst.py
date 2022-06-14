@@ -10,9 +10,8 @@ import ipal_iids.settings as settings
 from ids.ids import MetaIDS
 
 
-# not finished but a start. Calculates q_min and q_max for one process value
-class Task_3_2(MetaIDS):
-    _name = "Task_3_2"
+class PST(MetaIDS):
+    _name = "PST"
     _description = "Probabilistic Suffix Trees"
     _requires = ["train.ipal", "live.ipal"]
     _pst_default_settings = {"N": 3, "Threshold": 0.5, "alert_unknown": False}
