@@ -67,7 +67,6 @@ class Task_3_2(MetaIDS):
             if self._last_n[i] in iter_node.type_child_map:
                 iter_node = iter_node.type_child_map[self._last_n[i]]
             else:
-                print("No sequence found")
                 return True, {"Likelihood": likelihood}
 
         likelihood = (
