@@ -8,15 +8,15 @@ from ids.ids import MetaIDS
 
 
 # not finished but a start. Calculates q_min and q_max for one process value
-class Task_3_1(MetaIDS):
-    _name = "Task_3_1"
+class MinMaxChange(MetaIDS):
+    _name = "MinMaxChange"
     _description = "Minumum and maximum change over a given window"
-    _task3_1_default_settings = {"N": 10, "Q": 1, "alert_unknown": True}
+    _minmaxchange_default_settings = {"N": 10, "Q": 1, "alert_unknown": True}
     _requires = ["train.state", "live.state"]
 
     def __init__(self, name=None):
         super().__init__(name=name)
-        self._add_default_settings(self._task3_1_default_settings)
+        self._add_default_settings(self._minmaxchange_default_settings)
 
     def train(self, ipal=None, state=None):
         # Map each process to its maximum and minimum change:

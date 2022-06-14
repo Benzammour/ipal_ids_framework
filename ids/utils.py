@@ -10,7 +10,7 @@ from .interarrivaltime.Mean import InterArrivalTimeMean
 from .interarrivaltime.Range import InterArrivalTimeRange
 from .oracles.OptimalIDS import OptimalIDS
 from .oracles.DummyIDS import DummyIDS
-from .task_3_1.Task_3_1 import Task_3_1
+from .minmaxchange.MinMaxChange import MinMaxChange
 from .task_3_2.Task_3_2 import Task_3_2
 
 idss = [
@@ -25,7 +25,7 @@ idss = [
     DummyIDS,
     RandomForest,
     SVM,
-    Task_3_1,
+    MinMaxChange,
     Task_3_2,
 ]
 

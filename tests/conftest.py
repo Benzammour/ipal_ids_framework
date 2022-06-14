@@ -16,7 +16,7 @@ IDSNAMES = [
     "Optimal",
     "RandomForest",
     "SVM",
-    "Task_3_1",
+    "MinMaxChange",
 ]
 
 
