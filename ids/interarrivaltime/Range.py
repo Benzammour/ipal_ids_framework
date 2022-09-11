@@ -52,6 +52,8 @@ class InterArrivalTimeRange(MetaIDS):
 
                 if identifier not in events:
                     events[identifier] = []
+                elif len(events[identifier]) > 0 and timestamp == events[identifier][-1]:
+                    continue
                 events[identifier].append(timestamp)
 
         # Calculate inter-arrival time and range model

@@ -13,9 +13,9 @@ from ids.ids import MetaIDS
 # Look into that paper to understand what is going on here
 
 
-class InterArrivalTimeMean(MetaIDS):
+class InterArrivalTimeRangeMean(MetaIDS):
 
-    _name = "inter-arrival-mean"
+    _name = "inter-arrival-range-mean"
     _description = "Mean inter-arrival time"
     _requires = ["train.ipal", "live.ipal"]
     _interarrivaltimemean_default_settings = {"N": 4, "W": 5, "alert_unknown": True}
@@ -70,14 +70,21 @@ class InterArrivalTimeMean(MetaIDS):
                 settings.logger.warning("Only single window of type {}".format(k))
                 continue
 
-            mu = np.mean(interevent_times)
-            sigma = np.std(interevent_times)
+            all_means = []
+            i = self.settings["W"]
+            while i < len(interevent_times):
+                all_means.append(np.mean(interevent_times[(i - self.settings["W"]):i]))
+                i += 1
 
-            ul = mu + self.settings["N"] * sigma
-            ll = mu - self.settings["N"] * sigma
+            lowest = np.amin(all_means)
+            highest = np.amax(all_means)
+            sigma = np.std(all_means)
+
+            ul = highest + self.settings["N"] * sigma
+            ll = lowest - self.settings["N"] * sigma
             ll = max(0, ll)  # Only positive inter-arrival times
 
-            self.mean_model[k] = {"ll": ll, "ul": ul, "mu": mu, "sigma": sigma}
+            self.mean_model[k] = {"ll": ll, "ul": ul, "highest": highest, "lowest": lowest, "sigma": sigma}
             self.sliding_windows[k] = {
                 "timestamp": [],
                 "malicious": [],
@@ -85,7 +92,7 @@ class InterArrivalTimeMean(MetaIDS):
             }
 
             settings.logger.info(
-                "- {} [{}, {}] mean: {} sigma: {}".format(k, ll, ul, mu, sigma)
+                "- {} [{}, {}] lowest: {} highest: {} sigma: {}".format(k, ll, ul, lowest, highest, sigma)
             )
 
     def new_ipal_msg(self, msg):
@@ -102,6 +109,8 @@ class InterArrivalTimeMean(MetaIDS):
                 intereventtime = (
                     msg["timestamp"] - self.sliding_windows[identifier]["timestamp"][-1]
                 )
+                if intereventtime == 0:
+                    return False, 0
                 self.sliding_windows[identifier]["interevents"].append(intereventtime)
 
             # Slide window
@@ -129,7 +138,7 @@ class InterArrivalTimeMean(MetaIDS):
                 and iet_mean < self.mean_model[identifier]["ul"]
             )
 
-            return alert, iet_mean - self.mean_model[identifier]["mu"]
+            return alert, iet_mean
 
     def save_trained_model(self):
         if self.settings["model-file"] is None:

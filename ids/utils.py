@@ -8,6 +8,7 @@ from .classifier.RandomForest import RandomForest
 from .classifier.SVM import SVM
 from .interarrivaltime.Mean import InterArrivalTimeMean
 from .interarrivaltime.Range import InterArrivalTimeRange
+from .interarrivaltime.RangeMean import InterArrivalTimeRangeMean
 from .simple.histogram import Histogram
 from .simple.minmax import MinMax
 from .simple.steadytime import SteadyTime
@@ -25,6 +26,7 @@ idss = [
     Histogram,
     InterArrivalTimeMean,
     InterArrivalTimeRange,
+    InterArrivalTimeRangeMean,
     IsolationForest,
     MinMax,
     NaiveBayes,
