@@ -1,0 +1,1596 @@
+{
+    "_name": "PST",
+    "settings": {
+        "_type": "PST",
+        "N": 10,
+        "Threshold": 0.005,
+        "model-file": "./pst.model",
+        "alert_unknown": false
+    },
+    "prob_suffix_trees": {
+        "10.0.104.11|10.0.104.2": {
+            "counter": 711,
+            "prefix": "",
+            "childs": {
+                "I-100": {
+                    "counter": 48,
+                    "prefix": "|I-100",
+                    "childs": {
+                        "I-100": {
+                            "counter": 16,
+                            "prefix": "|I-100|I-100",
+                            "childs": {
+                                "I-13": {
+                                    "counter": 16,
+                                    "prefix": "|I-100|I-100|I-13",
+                                    "childs": {
+                                        "I-100": {
+                                            "counter": 16,
+                                            "prefix": "|I-100|I-100|I-13|I-100",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 16,
+                                                    "prefix": "|I-100|I-100|I-13|I-100|I-13",
+                                                    "childs": {
+                                                        "I-103": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-100|I-100|I-13|I-100|I-13|I-103",
+                                                            "childs": {
+                                                                "I-103": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-100|I-100|I-13|I-100|I-13|I-103|I-103",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-100|I-100|I-13|I-100|I-13|I-103|I-103|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-100|I-100|I-13|I-100|I-13|I-103|I-103|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-100|I-100|I-13|I-100|I-13|I-103|I-103|I-13|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "I-13": {
+                            "counter": 32,
+                            "prefix": "|I-100|I-13",
+                            "childs": {
+                                "I-100": {
+                                    "counter": 16,
+                                    "prefix": "|I-100|I-13|I-100",
+                                    "childs": {
+                                        "I-13": {
+                                            "counter": 16,
+                                            "prefix": "|I-100|I-13|I-100|I-13",
+                                            "childs": {
+                                                "I-103": {
+                                                    "counter": 16,
+                                                    "prefix": "|I-100|I-13|I-100|I-13|I-103",
+                                                    "childs": {
+                                                        "I-103": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-100|I-13|I-100|I-13|I-103|I-103",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-100|I-13|I-100|I-13|I-103|I-103|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-100|I-13|I-100|I-13|I-103|I-103|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-100|I-13|I-100|I-13|I-103|I-103|I-13|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-100|I-13|I-100|I-13|I-103|I-103|I-13|I-13|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "I-103": {
+                                    "counter": 16,
+                                    "prefix": "|I-100|I-13|I-103",
+                                    "childs": {
+                                        "I-103": {
+                                            "counter": 16,
+                                            "prefix": "|I-100|I-13|I-103|I-103",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 16,
+                                                    "prefix": "|I-100|I-13|I-103|I-103|I-13",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-100|I-13|I-103|I-103|I-13|I-13",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-100|I-13|I-103|I-103|I-13|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-100|I-13|I-103|I-103|I-13|I-13|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-50": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-100|I-13|I-103|I-103|I-13|I-13|I-13|I-13|I-50",
+                                                                                    "childs": {
+                                                                                        "I-50": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-100|I-13|I-103|I-103|I-13|I-13|I-13|I-13|I-50|I-50",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "I-13": {
+                    "counter": 472,
+                    "prefix": "|I-13",
+                    "childs": {
+                        "I-100": {
+                            "counter": 31,
+                            "prefix": "|I-13|I-100",
+                            "childs": {
+                                "I-13": {
+                                    "counter": 16,
+                                    "prefix": "|I-13|I-100|I-13",
+                                    "childs": {
+                                        "I-103": {
+                                            "counter": 16,
+                                            "prefix": "|I-13|I-100|I-13|I-103",
+                                            "childs": {
+                                                "I-103": {
+                                                    "counter": 16,
+                                                    "prefix": "|I-13|I-100|I-13|I-103|I-103",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-13|I-100|I-13|I-103|I-103|I-13",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-13|I-100|I-13|I-103|I-103|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-13|I-100|I-13|I-103|I-103|I-13|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-100|I-13|I-103|I-103|I-13|I-13|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-50": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-100|I-13|I-103|I-103|I-13|I-13|I-13|I-13|I-50",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "I-100": {
+                                    "counter": 15,
+                                    "prefix": "|I-13|I-100|I-100",
+                                    "childs": {
+                                        "I-13": {
+                                            "counter": 15,
+                                            "prefix": "|I-13|I-100|I-100|I-13",
+                                            "childs": {
+                                                "I-100": {
+                                                    "counter": 15,
+                                                    "prefix": "|I-13|I-100|I-100|I-13|I-100",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 15,
+                                                            "prefix": "|I-13|I-100|I-100|I-13|I-100|I-13",
+                                                            "childs": {
+                                                                "I-103": {
+                                                                    "counter": 15,
+                                                                    "prefix": "|I-13|I-100|I-100|I-13|I-100|I-13|I-103",
+                                                                    "childs": {
+                                                                        "I-103": {
+                                                                            "counter": 15,
+                                                                            "prefix": "|I-13|I-100|I-100|I-13|I-100|I-13|I-103|I-103",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 15,
+                                                                                    "prefix": "|I-13|I-100|I-100|I-13|I-100|I-13|I-103|I-103|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 15,
+                                                                                            "prefix": "|I-13|I-100|I-100|I-13|I-100|I-13|I-103|I-103|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "I-103": {
+                            "counter": 16,
+                            "prefix": "|I-13|I-103",
+                            "childs": {
+                                "I-103": {
+                                    "counter": 16,
+                                    "prefix": "|I-13|I-103|I-103",
+                                    "childs": {
+                                        "I-13": {
+                                            "counter": 16,
+                                            "prefix": "|I-13|I-103|I-103|I-13",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 16,
+                                                    "prefix": "|I-13|I-103|I-103|I-13|I-13",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-13|I-103|I-103|I-13|I-13|I-13",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-13|I-103|I-103|I-13|I-13|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-50": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-13|I-103|I-103|I-13|I-13|I-13|I-13|I-50",
+                                                                            "childs": {
+                                                                                "I-50": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-103|I-103|I-13|I-13|I-13|I-13|I-50|I-50",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-103|I-103|I-13|I-13|I-13|I-13|I-50|I-50|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "I-13": {
+                            "counter": 314,
+                            "prefix": "|I-13|I-13",
+                            "childs": {
+                                "I-13": {
+                                    "counter": 188,
+                                    "prefix": "|I-13|I-13|I-13",
+                                    "childs": {
+                                        "I-13": {
+                                            "counter": 78,
+                                            "prefix": "|I-13|I-13|I-13|I-13",
+                                            "childs": {
+                                                "I-50": {
+                                                    "counter": 16,
+                                                    "prefix": "|I-13|I-13|I-13|I-13|I-50",
+                                                    "childs": {
+                                                        "I-50": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-13|I-13|I-13|I-13|I-50|I-50",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-13|I-13|I-13|I-13|I-50|I-50|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-13|I-13|I-13|I-13|I-50|I-50|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-102": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-102",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-102|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "I-102": {
+                                                    "counter": 32,
+                                                    "prefix": "|I-13|I-13|I-13|I-13|I-102",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 32,
+                                                            "prefix": "|I-13|I-13|I-13|I-13|I-102|I-13",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 32,
+                                                                    "prefix": "|I-13|I-13|I-13|I-13|I-102|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 32,
+                                                                            "prefix": "|I-13|I-13|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-50": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-50",
+                                                                                    "childs": {
+                                                                                        "I-50": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-50|I-50",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "I-13": {
+                                                    "counter": 15,
+                                                    "prefix": "|I-13|I-13|I-13|I-13|I-13",
+                                                    "childs": {
+                                                        "I-100": {
+                                                            "counter": 15,
+                                                            "prefix": "|I-13|I-13|I-13|I-13|I-13|I-100",
+                                                            "childs": {
+                                                                "I-100": {
+                                                                    "counter": 15,
+                                                                    "prefix": "|I-13|I-13|I-13|I-13|I-13|I-100|I-100",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 15,
+                                                                            "prefix": "|I-13|I-13|I-13|I-13|I-13|I-100|I-100|I-13",
+                                                                            "childs": {
+                                                                                "I-100": {
+                                                                                    "counter": 15,
+                                                                                    "prefix": "|I-13|I-13|I-13|I-13|I-13|I-100|I-100|I-13|I-100",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 15,
+                                                                                            "prefix": "|I-13|I-13|I-13|I-13|I-13|I-100|I-100|I-13|I-100|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "I-100": {
+                                                    "counter": 15,
+                                                    "prefix": "|I-13|I-13|I-13|I-13|I-100",
+                                                    "childs": {
+                                                        "I-100": {
+                                                            "counter": 15,
+                                                            "prefix": "|I-13|I-13|I-13|I-13|I-100|I-100",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 15,
+                                                                    "prefix": "|I-13|I-13|I-13|I-13|I-100|I-100|I-13",
+                                                                    "childs": {
+                                                                        "I-100": {
+                                                                            "counter": 15,
+                                                                            "prefix": "|I-13|I-13|I-13|I-13|I-100|I-100|I-13|I-100",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 15,
+                                                                                    "prefix": "|I-13|I-13|I-13|I-13|I-100|I-100|I-13|I-100|I-13",
+                                                                                    "childs": {
+                                                                                        "I-103": {
+                                                                                            "counter": 15,
+                                                                                            "prefix": "|I-13|I-13|I-13|I-13|I-100|I-100|I-13|I-100|I-13|I-103",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "I-50": {
+                                            "counter": 48,
+                                            "prefix": "|I-13|I-13|I-13|I-50",
+                                            "childs": {
+                                                "I-50": {
+                                                    "counter": 48,
+                                                    "prefix": "|I-13|I-13|I-13|I-50|I-50",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 48,
+                                                            "prefix": "|I-13|I-13|I-13|I-50|I-50|I-13",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 48,
+                                                                    "prefix": "|I-13|I-13|I-13|I-50|I-50|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-102": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-102",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-102|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-102|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "I-13": {
+                                                                            "counter": 32,
+                                                                            "prefix": "|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-102": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-13|I-102",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-13|I-102|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-102": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-13|I-13|I-102",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "I-102": {
+                                            "counter": 47,
+                                            "prefix": "|I-13|I-13|I-13|I-102",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 47,
+                                                    "prefix": "|I-13|I-13|I-13|I-102|I-13",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 47,
+                                                            "prefix": "|I-13|I-13|I-13|I-102|I-13|I-13",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 47,
+                                                                    "prefix": "|I-13|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-50": {
+                                                                            "counter": 32,
+                                                                            "prefix": "|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-50",
+                                                                            "childs": {
+                                                                                "I-50": {
+                                                                                    "counter": 32,
+                                                                                    "prefix": "|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-50|I-50",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 32,
+                                                                                            "prefix": "|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-50|I-50|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "I-13": {
+                                                                            "counter": 15,
+                                                                            "prefix": "|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 15,
+                                                                                    "prefix": "|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-100": {
+                                                                                            "counter": 15,
+                                                                                            "prefix": "|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-13|I-13|I-100",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "I-100": {
+                                            "counter": 15,
+                                            "prefix": "|I-13|I-13|I-13|I-100",
+                                            "childs": {
+                                                "I-100": {
+                                                    "counter": 15,
+                                                    "prefix": "|I-13|I-13|I-13|I-100|I-100",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 15,
+                                                            "prefix": "|I-13|I-13|I-13|I-100|I-100|I-13",
+                                                            "childs": {
+                                                                "I-100": {
+                                                                    "counter": 15,
+                                                                    "prefix": "|I-13|I-13|I-13|I-100|I-100|I-13|I-100",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 15,
+                                                                            "prefix": "|I-13|I-13|I-13|I-100|I-100|I-13|I-100|I-13",
+                                                                            "childs": {
+                                                                                "I-103": {
+                                                                                    "counter": 15,
+                                                                                    "prefix": "|I-13|I-13|I-13|I-100|I-100|I-13|I-100|I-13|I-103",
+                                                                                    "childs": {
+                                                                                        "I-103": {
+                                                                                            "counter": 15,
+                                                                                            "prefix": "|I-13|I-13|I-13|I-100|I-100|I-13|I-100|I-13|I-103|I-103",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "I-50": {
+                                    "counter": 48,
+                                    "prefix": "|I-13|I-13|I-50",
+                                    "childs": {
+                                        "I-50": {
+                                            "counter": 48,
+                                            "prefix": "|I-13|I-13|I-50|I-50",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 48,
+                                                    "prefix": "|I-13|I-13|I-50|I-50|I-13",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 48,
+                                                            "prefix": "|I-13|I-13|I-50|I-50|I-13|I-13",
+                                                            "childs": {
+                                                                "I-102": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-13|I-13|I-50|I-50|I-13|I-13|I-102",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-13|I-13|I-50|I-50|I-13|I-13|I-102|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-13|I-50|I-50|I-13|I-13|I-102|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-13|I-50|I-50|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "I-13": {
+                                                                    "counter": 32,
+                                                                    "prefix": "|I-13|I-13|I-50|I-50|I-13|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-102": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-13|I-13|I-50|I-50|I-13|I-13|I-13|I-102",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-13|I-50|I-50|I-13|I-13|I-13|I-102|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-13|I-50|I-50|I-13|I-13|I-13|I-102|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-13|I-13|I-50|I-50|I-13|I-13|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-102": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-13|I-50|I-50|I-13|I-13|I-13|I-13|I-102",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-13|I-50|I-50|I-13|I-13|I-13|I-13|I-102|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "I-102": {
+                                    "counter": 63,
+                                    "prefix": "|I-13|I-13|I-102",
+                                    "childs": {
+                                        "I-13": {
+                                            "counter": 63,
+                                            "prefix": "|I-13|I-13|I-102|I-13",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 63,
+                                                    "prefix": "|I-13|I-13|I-102|I-13|I-13",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 63,
+                                                            "prefix": "|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 31,
+                                                                    "prefix": "|I-13|I-13|I-102|I-13|I-13|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-102": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-13|I-13|I-102|I-13|I-13|I-13|I-13|I-102",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-13|I-102|I-13|I-13|I-13|I-13|I-102|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-13|I-102|I-13|I-13|I-13|I-13|I-102|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "I-13": {
+                                                                            "counter": 15,
+                                                                            "prefix": "|I-13|I-13|I-102|I-13|I-13|I-13|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-100": {
+                                                                                    "counter": 15,
+                                                                                    "prefix": "|I-13|I-13|I-102|I-13|I-13|I-13|I-13|I-13|I-100",
+                                                                                    "childs": {
+                                                                                        "I-100": {
+                                                                                            "counter": 15,
+                                                                                            "prefix": "|I-13|I-13|I-102|I-13|I-13|I-13|I-13|I-13|I-100|I-100",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "I-50": {
+                                                                    "counter": 32,
+                                                                    "prefix": "|I-13|I-13|I-102|I-13|I-13|I-13|I-50",
+                                                                    "childs": {
+                                                                        "I-50": {
+                                                                            "counter": 32,
+                                                                            "prefix": "|I-13|I-13|I-102|I-13|I-13|I-13|I-50|I-50",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 32,
+                                                                                    "prefix": "|I-13|I-13|I-102|I-13|I-13|I-13|I-50|I-50|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 32,
+                                                                                            "prefix": "|I-13|I-13|I-102|I-13|I-13|I-13|I-50|I-50|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "I-100": {
+                                    "counter": 15,
+                                    "prefix": "|I-13|I-13|I-100",
+                                    "childs": {
+                                        "I-100": {
+                                            "counter": 15,
+                                            "prefix": "|I-13|I-13|I-100|I-100",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 15,
+                                                    "prefix": "|I-13|I-13|I-100|I-100|I-13",
+                                                    "childs": {
+                                                        "I-100": {
+                                                            "counter": 15,
+                                                            "prefix": "|I-13|I-13|I-100|I-100|I-13|I-100",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 15,
+                                                                    "prefix": "|I-13|I-13|I-100|I-100|I-13|I-100|I-13",
+                                                                    "childs": {
+                                                                        "I-103": {
+                                                                            "counter": 15,
+                                                                            "prefix": "|I-13|I-13|I-100|I-100|I-13|I-100|I-13|I-103",
+                                                                            "childs": {
+                                                                                "I-103": {
+                                                                                    "counter": 15,
+                                                                                    "prefix": "|I-13|I-13|I-100|I-100|I-13|I-100|I-13|I-103|I-103",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 15,
+                                                                                            "prefix": "|I-13|I-13|I-100|I-100|I-13|I-100|I-13|I-103|I-103|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "I-50": {
+                            "counter": 48,
+                            "prefix": "|I-13|I-50",
+                            "childs": {
+                                "I-50": {
+                                    "counter": 48,
+                                    "prefix": "|I-13|I-50|I-50",
+                                    "childs": {
+                                        "I-13": {
+                                            "counter": 48,
+                                            "prefix": "|I-13|I-50|I-50|I-13",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 48,
+                                                    "prefix": "|I-13|I-50|I-50|I-13|I-13",
+                                                    "childs": {
+                                                        "I-102": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-13|I-50|I-50|I-13|I-13|I-102",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-13|I-50|I-50|I-13|I-13|I-102|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-13|I-50|I-50|I-13|I-13|I-102|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-50|I-50|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-50|I-50|I-13|I-13|I-102|I-13|I-13|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "I-13": {
+                                                            "counter": 32,
+                                                            "prefix": "|I-13|I-50|I-50|I-13|I-13|I-13",
+                                                            "childs": {
+                                                                "I-102": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-13|I-50|I-50|I-13|I-13|I-13|I-102",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-13|I-50|I-50|I-13|I-13|I-13|I-102|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-50|I-50|I-13|I-13|I-13|I-102|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-50|I-50|I-13|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-13|I-50|I-50|I-13|I-13|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-102": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-13|I-50|I-50|I-13|I-13|I-13|I-13|I-102",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-50|I-50|I-13|I-13|I-13|I-13|I-102|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-50|I-50|I-13|I-13|I-13|I-13|I-102|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "I-102": {
+                            "counter": 63,
+                            "prefix": "|I-13|I-102",
+                            "childs": {
+                                "I-13": {
+                                    "counter": 63,
+                                    "prefix": "|I-13|I-102|I-13",
+                                    "childs": {
+                                        "I-13": {
+                                            "counter": 63,
+                                            "prefix": "|I-13|I-102|I-13|I-13",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 63,
+                                                    "prefix": "|I-13|I-102|I-13|I-13|I-13",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 31,
+                                                            "prefix": "|I-13|I-102|I-13|I-13|I-13|I-13",
+                                                            "childs": {
+                                                                "I-102": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-13|I-102|I-13|I-13|I-13|I-13|I-102",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-13|I-102|I-13|I-13|I-13|I-13|I-102|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-13|I-102|I-13|I-13|I-13|I-13|I-102|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-13|I-102|I-13|I-13|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "I-13": {
+                                                                    "counter": 15,
+                                                                    "prefix": "|I-13|I-102|I-13|I-13|I-13|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-100": {
+                                                                            "counter": 15,
+                                                                            "prefix": "|I-13|I-102|I-13|I-13|I-13|I-13|I-13|I-100",
+                                                                            "childs": {
+                                                                                "I-100": {
+                                                                                    "counter": 15,
+                                                                                    "prefix": "|I-13|I-102|I-13|I-13|I-13|I-13|I-13|I-100|I-100",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 15,
+                                                                                            "prefix": "|I-13|I-102|I-13|I-13|I-13|I-13|I-13|I-100|I-100|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "I-50": {
+                                                            "counter": 32,
+                                                            "prefix": "|I-13|I-102|I-13|I-13|I-13|I-50",
+                                                            "childs": {
+                                                                "I-50": {
+                                                                    "counter": 32,
+                                                                    "prefix": "|I-13|I-102|I-13|I-13|I-13|I-50|I-50",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 32,
+                                                                            "prefix": "|I-13|I-102|I-13|I-13|I-13|I-50|I-50|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 32,
+                                                                                    "prefix": "|I-13|I-102|I-13|I-13|I-13|I-50|I-50|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 32,
+                                                                                            "prefix": "|I-13|I-102|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "I-103": {
+                    "counter": 32,
+                    "prefix": "|I-103",
+                    "childs": {
+                        "I-103": {
+                            "counter": 16,
+                            "prefix": "|I-103|I-103",
+                            "childs": {
+                                "I-13": {
+                                    "counter": 16,
+                                    "prefix": "|I-103|I-103|I-13",
+                                    "childs": {
+                                        "I-13": {
+                                            "counter": 16,
+                                            "prefix": "|I-103|I-103|I-13|I-13",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 16,
+                                                    "prefix": "|I-103|I-103|I-13|I-13|I-13",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-103|I-103|I-13|I-13|I-13|I-13",
+                                                            "childs": {
+                                                                "I-50": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-103|I-103|I-13|I-13|I-13|I-13|I-50",
+                                                                    "childs": {
+                                                                        "I-50": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-103|I-103|I-13|I-13|I-13|I-13|I-50|I-50",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-103|I-103|I-13|I-13|I-13|I-13|I-50|I-50|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-103|I-103|I-13|I-13|I-13|I-13|I-50|I-50|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "I-13": {
+                            "counter": 16,
+                            "prefix": "|I-103|I-13",
+                            "childs": {
+                                "I-13": {
+                                    "counter": 16,
+                                    "prefix": "|I-103|I-13|I-13",
+                                    "childs": {
+                                        "I-13": {
+                                            "counter": 16,
+                                            "prefix": "|I-103|I-13|I-13|I-13",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 16,
+                                                    "prefix": "|I-103|I-13|I-13|I-13|I-13",
+                                                    "childs": {
+                                                        "I-50": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-103|I-13|I-13|I-13|I-13|I-50",
+                                                            "childs": {
+                                                                "I-50": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-103|I-13|I-13|I-13|I-13|I-50|I-50",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-103|I-13|I-13|I-13|I-13|I-50|I-50|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-103|I-13|I-13|I-13|I-13|I-50|I-50|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-102": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-103|I-13|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-102",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "I-50": {
+                    "counter": 96,
+                    "prefix": "|I-50",
+                    "childs": {
+                        "I-50": {
+                            "counter": 48,
+                            "prefix": "|I-50|I-50",
+                            "childs": {
+                                "I-13": {
+                                    "counter": 48,
+                                    "prefix": "|I-50|I-50|I-13",
+                                    "childs": {
+                                        "I-13": {
+                                            "counter": 48,
+                                            "prefix": "|I-50|I-50|I-13|I-13",
+                                            "childs": {
+                                                "I-102": {
+                                                    "counter": 16,
+                                                    "prefix": "|I-50|I-50|I-13|I-13|I-102",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-50|I-50|I-13|I-13|I-102|I-13",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-50|I-50|I-13|I-13|I-102|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-50|I-50|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-50|I-50|I-13|I-13|I-102|I-13|I-13|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-102": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-50|I-50|I-13|I-13|I-102|I-13|I-13|I-13|I-13|I-102",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "I-13": {
+                                                    "counter": 32,
+                                                    "prefix": "|I-50|I-50|I-13|I-13|I-13",
+                                                    "childs": {
+                                                        "I-102": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-50|I-50|I-13|I-13|I-13|I-102",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-50|I-50|I-13|I-13|I-13|I-102|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-50|I-50|I-13|I-13|I-13|I-102|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-50|I-50|I-13|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-50": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-50|I-50|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-50",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "I-13": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-50|I-50|I-13|I-13|I-13|I-13",
+                                                            "childs": {
+                                                                "I-102": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-50|I-50|I-13|I-13|I-13|I-13|I-102",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-50|I-50|I-13|I-13|I-13|I-13|I-102|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-50|I-50|I-13|I-13|I-13|I-13|I-102|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-50|I-50|I-13|I-13|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "I-13": {
+                            "counter": 48,
+                            "prefix": "|I-50|I-13",
+                            "childs": {
+                                "I-13": {
+                                    "counter": 48,
+                                    "prefix": "|I-50|I-13|I-13",
+                                    "childs": {
+                                        "I-102": {
+                                            "counter": 16,
+                                            "prefix": "|I-50|I-13|I-13|I-102",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 16,
+                                                    "prefix": "|I-50|I-13|I-13|I-102|I-13",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-50|I-13|I-13|I-102|I-13|I-13",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-50|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-50|I-13|I-13|I-102|I-13|I-13|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-102": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-50|I-13|I-13|I-102|I-13|I-13|I-13|I-13|I-102",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-50|I-13|I-13|I-102|I-13|I-13|I-13|I-13|I-102|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "I-13": {
+                                            "counter": 32,
+                                            "prefix": "|I-50|I-13|I-13|I-13",
+                                            "childs": {
+                                                "I-102": {
+                                                    "counter": 16,
+                                                    "prefix": "|I-50|I-13|I-13|I-13|I-102",
+                                                    "childs": {
+                                                        "I-13": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-50|I-13|I-13|I-13|I-102|I-13",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-50|I-13|I-13|I-13|I-102|I-13|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-50|I-13|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-50": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-50|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-50",
+                                                                                    "childs": {
+                                                                                        "I-50": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-50|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-50|I-50",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "I-13": {
+                                                    "counter": 16,
+                                                    "prefix": "|I-50|I-13|I-13|I-13|I-13",
+                                                    "childs": {
+                                                        "I-102": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-50|I-13|I-13|I-13|I-13|I-102",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-50|I-13|I-13|I-13|I-13|I-102|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-50|I-13|I-13|I-13|I-13|I-102|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-50|I-13|I-13|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-50|I-13|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "I-102": {
+                    "counter": 63,
+                    "prefix": "|I-102",
+                    "childs": {
+                        "I-13": {
+                            "counter": 63,
+                            "prefix": "|I-102|I-13",
+                            "childs": {
+                                "I-13": {
+                                    "counter": 63,
+                                    "prefix": "|I-102|I-13|I-13",
+                                    "childs": {
+                                        "I-13": {
+                                            "counter": 63,
+                                            "prefix": "|I-102|I-13|I-13|I-13",
+                                            "childs": {
+                                                "I-13": {
+                                                    "counter": 31,
+                                                    "prefix": "|I-102|I-13|I-13|I-13|I-13",
+                                                    "childs": {
+                                                        "I-102": {
+                                                            "counter": 16,
+                                                            "prefix": "|I-102|I-13|I-13|I-13|I-13|I-102",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 16,
+                                                                    "prefix": "|I-102|I-13|I-13|I-13|I-13|I-102|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 16,
+                                                                            "prefix": "|I-102|I-13|I-13|I-13|I-13|I-102|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 16,
+                                                                                    "prefix": "|I-102|I-13|I-13|I-13|I-13|I-102|I-13|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-50": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-102|I-13|I-13|I-13|I-13|I-102|I-13|I-13|I-13|I-50",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "I-13": {
+                                                            "counter": 15,
+                                                            "prefix": "|I-102|I-13|I-13|I-13|I-13|I-13",
+                                                            "childs": {
+                                                                "I-100": {
+                                                                    "counter": 15,
+                                                                    "prefix": "|I-102|I-13|I-13|I-13|I-13|I-13|I-100",
+                                                                    "childs": {
+                                                                        "I-100": {
+                                                                            "counter": 15,
+                                                                            "prefix": "|I-102|I-13|I-13|I-13|I-13|I-13|I-100|I-100",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 15,
+                                                                                    "prefix": "|I-102|I-13|I-13|I-13|I-13|I-13|I-100|I-100|I-13",
+                                                                                    "childs": {
+                                                                                        "I-100": {
+                                                                                            "counter": 15,
+                                                                                            "prefix": "|I-102|I-13|I-13|I-13|I-13|I-13|I-100|I-100|I-13|I-100",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "I-50": {
+                                                    "counter": 32,
+                                                    "prefix": "|I-102|I-13|I-13|I-13|I-50",
+                                                    "childs": {
+                                                        "I-50": {
+                                                            "counter": 32,
+                                                            "prefix": "|I-102|I-13|I-13|I-13|I-50|I-50",
+                                                            "childs": {
+                                                                "I-13": {
+                                                                    "counter": 32,
+                                                                    "prefix": "|I-102|I-13|I-13|I-13|I-50|I-50|I-13",
+                                                                    "childs": {
+                                                                        "I-13": {
+                                                                            "counter": 32,
+                                                                            "prefix": "|I-102|I-13|I-13|I-13|I-50|I-50|I-13|I-13",
+                                                                            "childs": {
+                                                                                "I-13": {
+                                                                                    "counter": 32,
+                                                                                    "prefix": "|I-102|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-13",
+                                                                                    "childs": {
+                                                                                        "I-102": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-102|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-13|I-102",
+                                                                                            "childs": {}
+                                                                                        },
+                                                                                        "I-13": {
+                                                                                            "counter": 16,
+                                                                                            "prefix": "|I-102|I-13|I-13|I-13|I-50|I-50|I-13|I-13|I-13|I-13",
+                                                                                            "childs": {}
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
