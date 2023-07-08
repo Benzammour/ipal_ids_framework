@@ -36,6 +36,7 @@ class MinMax(FeatureIDS):
             data = [e[i] for e in events if e[i] is not None]
             self.mins[i] = min(data)
             self.maxs[i] = max(data)
+
             self.deltas[i] = (self.maxs[i] - self.mins[i]) / 2
 
             if len(set(data)) <= self.settings["discrete_threshold"]:
@@ -50,13 +51,14 @@ class MinMax(FeatureIDS):
     def new_state_msg(self, msg):
         likelihood = 0
         alert = False
+        culprits = []
 
         state = super().new_state_msg(msg)
         if state is None:
-            return alert, likelihood
+            return alert, likelihood, culprits
 
-        for value, minimum, maximum, delta in zip(
-            state, self.mins.values(), self.maxs.values(), self.deltas.values()
+        for i, (value, minimum, maximum, delta) in enumerate(
+            zip(state, self.mins.values(), self.maxs.values(), self.deltas.values())
         ):
             err = delta * self.settings["threshold"]
 
@@ -75,8 +77,9 @@ class MinMax(FeatureIDS):
             # Trigger alert
             if value is not None and (value < minimum - err or maximum + err < value):
                 alert |= True
+                culprits.append(self.features[i][1])
 
-        return alert, likelihood
+        return alert, likelihood, culprits
 
     def new_ipal_msg(self, msg):
         # There is no difference for this IDS in state or message format! It only depends on the configuration which features are used.

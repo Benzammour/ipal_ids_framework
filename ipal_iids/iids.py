@@ -556,9 +556,10 @@ def live_idss(idss, combiner):  # noqa: C901
 
             for ids in idss:
                 if ids.requires("live.state"):
-                    alert, score = ids.new_state_msg(state_msg)
+                    alert, score, culprits = ids.new_state_msg(state_msg)
                     state_msg["alerts"][ids._name] = alert
                     state_msg["scores"][ids._name] = score
+                    state_msg["culprits"] = culprits
 
             alert, score, offset = combiner.combine(
                 state_msg["alerts"], state_msg["scores"]
