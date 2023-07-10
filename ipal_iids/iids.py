@@ -559,7 +559,12 @@ def live_idss(idss, combiner):  # noqa: C901
                     alert, score, culprits = ids.new_state_msg(state_msg)
                     state_msg["alerts"][ids._name] = alert
                     state_msg["scores"][ids._name] = score
-                    state_msg["culprits"] = culprits
+                    if alert and len(culprits) == 0:
+                        settings.logger.warning(
+                            "IDS gives an alarm but no culprits exist"
+                        )
+                    elif alert:
+                        state_msg["culprits"] = culprits
 
             alert, score, offset = combiner.combine(
                 state_msg["alerts"], state_msg["scores"]
